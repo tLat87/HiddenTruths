@@ -1,97 +1,166 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Hidden Truths
 
-# Getting Started
+**Uncover the stories between fact and fable.**
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A React Native app that explores the fascinating world where myths and history intertwine. Each story hides a secret — your task is to decide whether it's true or just a tale.
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 📖 Stories
+- **10 mysterious stories** inspired by real legends and timeless myths
+- Beautiful story cards with emoji illustrations
+- A-Z / Z-A sorting functionality
+- Share stories with friends
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 🧩 Truth or Tale Quiz
+- Interactive quiz after each story
+- Test your intuition and learn fascinating facts
+- Immediate feedback with explanations
+- Animated confetti for correct answers
+- Haptic feedback for wrong answers
 
-```sh
-# Using npm
+### ⭐ Progress Tracking
+- **Truth Accuracy** - Track how often you separate fact from fable
+- **Reading Progress** - See how far your curiosity has taken you
+- Elegant circular progress bars with smooth animations
+- Rank system from "The Unawakened" to "Truth Keeper"
+- Reset progress functionality
+
+### 💾 Favorites
+- Save your favorite stories for later reading
+- Easy access to saved stories
+- Remove stories from favorites
+- Clear all favorites option
+
+### ⚙️ Settings
+- Toggle music on/off
+- Toggle vibration on/off
+- Clear all favorites
+- Reset all progress
+- Share the app with friends
+
+### 🎨 Onboarding
+- 4-screen onboarding experience
+- Swipe navigation between screens
+- Introduction to app features
+- Skip option available
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (>= 18)
+- React Native development environment
+- iOS Simulator or Android Emulator
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. For iOS:
+```bash
+cd ios && pod install && cd ..
+```
+
+3. Start the Metro bundler:
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+4. Run the app:
+```bash
+# For iOS
 npm run ios
 
-# OR using Yarn
-yarn ios
+# For Android
+npm run android
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Project Structure
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── CircularProgress.tsx
+│   ├── ConfettiAnimation.tsx
+│   └── ToggleSwitch.tsx
+├── context/            # React Context for state management
+│   └── AppContext.tsx
+├── data/               # Static data
+│   └── stories.ts
+├── navigation/         # Navigation configuration
+│   └── AppNavigator.tsx
+├── screens/            # App screens
+│   ├── OnboardingScreen.tsx
+│   ├── StoriesScreen.tsx
+│   ├── StoryDetailScreen.tsx
+│   ├── SavedScreen.tsx
+│   ├── ProgressScreen.tsx
+│   └── SettingsScreen.tsx
+├── types/              # TypeScript type definitions
+│   └── index.ts
+└── utils/              # Utility functions
+    └── hapticFeedback.ts
+```
 
-## Step 3: Modify your app
+## Technologies Used
 
-Now that you have successfully run the app, let's make changes!
+- **React Native** - Cross-platform mobile development
+- **TypeScript** - Type safety and better development experience
+- **React Navigation** - Navigation between screens
+- **AsyncStorage** - Data persistence
+- **React Context** - State management
+- **Animated API** - Smooth animations and transitions
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Features Implementation
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### State Management
+- Uses React Context for global state management
+- Persistent storage with AsyncStorage
+- User progress, settings, and favorites tracking
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Animations
+- Smooth circular progress bars
+- Confetti animation for correct answers
+- Toggle switch animations
+- Screen transitions
 
-## Congratulations! :tada:
+### Data Persistence
+- User progress automatically saved
+- Settings preferences remembered
+- Favorites list maintained across app sessions
 
-You've successfully run and modified your React Native App. :partying_face:
+## Available Scripts
 
-### Now what?
+- `npm start` - Start Metro bundler
+- `npm run ios` - Run on iOS simulator
+- `npm run android` - Run on Android emulator
+- `npm test` - Run tests
+- `npm run lint` - Run ESLint
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## Story Content
 
-# Troubleshooting
+The app includes 10 carefully crafted stories covering:
+- Ancient Greek mythology and history
+- Archaeological discoveries
+- Legendary places and events
+- Historical figures and their stories
+- Modern mysteries and legends
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Each story is designed to challenge your knowledge and intuition about what's real and what's myth.
 
-# Learn More
+## Contributing
 
-To learn more about React Native, take a look at the following resources:
+Feel free to contribute to this project by:
+- Adding new stories
+- Improving the UI/UX
+- Adding new features
+- Fixing bugs
+- Improving performance
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## License
+
+This project is for educational and entertainment purposes.
