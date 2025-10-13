@@ -27,7 +27,7 @@ const SavedStoryCard: React.FC<SavedStoryCardProps> = ({
 }) => (
   <View style={styles.storyCard}>
     <View style={styles.storyImageContainer}>
-      <Text style={styles.storyImage}>{story.image}</Text>
+      <Image source={story.image} style={{width: 120, height: 120}} />
     </View>
     
     <View style={styles.storyContent}>
